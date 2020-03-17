@@ -7,7 +7,7 @@ var passport = require("./config/passport");
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8000;
 var db = require("./models");
-
+var exphbs = require("express-handlebars");
 // Creating express app and configuring middleware needed for authentication
 var app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +26,7 @@ app.set("view engine", "handlebars");
 
 
 // Requiring our routes
-require("./controllers/html-routes.js")(app);
+require("./controllers/handlebar-routes.js")(app);
 require("./controllers/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
