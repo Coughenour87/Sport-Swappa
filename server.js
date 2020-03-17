@@ -20,6 +20,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// express handlebars middleware
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars"); 
+
+
 // Requiring our routes
 require("./controllers/html-routes.js")(app);
 require("./controllers/api-routes.js")(app);
