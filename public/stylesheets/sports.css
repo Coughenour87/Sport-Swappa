@@ -1,6 +1,6 @@
 form.signup,
 form.login {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 img {
@@ -18,7 +18,7 @@ body {
     }
 
   
-  h1 {
+h1 {
     padding: 20px 0;
     margin: 0;
     margin-bottom: 0;
@@ -27,42 +27,9 @@ body {
     text-align: center;
     background: #00D1B2;
   }
-.port1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 300;
-    height: auto;
-  }
 
-.port {
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.portImg{
-  width: 100%;
-}
-
-/* Bottom right text */
-.portTitle {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  background:#02C39A;
-  color: black;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#pName {
-  margin-bottom: 0px;
-}
-
-
-  footer {
-    background-color: gray;
+footer {
+    background-color: #00D1B2;
     text-align: center;
     font: white;
   }
