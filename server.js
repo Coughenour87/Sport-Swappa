@@ -22,8 +22,7 @@ app.use(passport.session());
 
 // express handlebars middleware
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars"); 
-
+app.set("view engine", "handlebars");
 
 // Requiring our routes
 require("./controllers/handlebar-routes.js")(app);
@@ -34,7 +33,7 @@ db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
+      PORT
     );
   });
 });
