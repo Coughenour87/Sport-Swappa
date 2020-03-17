@@ -1,15 +1,24 @@
 // Requiring necessary npm packages
-var express = require("express");
-var session = require("express-session");
+const express = require("express");
+const exphbs = require("express-handlebars");
+const session = require("express-session");
+
+
 // Requiring passport as we've configured it
-var passport = require("./config/passport");
+const passport = require("./config/passport");
 
 // Setting up port and requiring models for syncing
+<<<<<<< HEAD
 var PORT = process.env.PORT || 8000;
 var db = require("./models");
 var exphbs = require("express-handlebars");
+=======
+const PORT = process.env.PORT || 8000;
+const db = require("./models");
+
+>>>>>>> 0a944eda0a703a0582ff2f278d99099cb3ac02eb
 // Creating express app and configuring middleware needed for authentication
-var app = express();
+const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -25,15 +34,24 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Requiring our routes
+<<<<<<< HEAD
 require("./controllers/handlebar-routes.js")(app);
+=======
+>>>>>>> 0a944eda0a703a0582ff2f278d99099cb3ac02eb
 require("./controllers/api-routes.js")(app);
+require("./controllers/handlebars-routes")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+  app.listen(PORT, () => {
     console.log(
       "==> 🌎 Listening on port %s. Visit http://localhost:%s/ in your browser.",
+<<<<<<< HEAD
       PORT
     );
+=======
+      PORT,
+      )
+>>>>>>> 0a944eda0a703a0582ff2f278d99099cb3ac02eb
   });
 });
