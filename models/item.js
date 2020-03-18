@@ -5,13 +5,17 @@ module.exports = (sequelize, DataTypes) => {
     {
       link: DataTypes.STRING,
       item_name: DataTypes.STRING,
-      price: DataTypes.DECIMAL(10, 2)
+      price: DataTypes.DECIMAL(10, 2),
+      sport_name: DataTypes.STRING,
+      professional: DataTypes.BOOLEAN
     },
     {}
   );
   Item.associate = function(models) {
-    Item.hasOne(models.Sport, {
-      onDelete: "cascade"
+    Item.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
     });
   };
   return Item;
