@@ -59,6 +59,8 @@ module.exports = function(app) {
       sport_name: req.body.sport,
       professional: req.body.level,
       description: req.body.description
+    }).then((newItem)=> {
+      console.log(newItem);
     });
   });
 };
