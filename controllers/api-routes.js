@@ -51,16 +51,19 @@ module.exports = function(app) {
     }
   });
 
-  app.post("api/sellItems", (req, res) => {
+  app.post("/api/sellItems", (req, res) => {
+    console.log("bingo");
     db.Item.create({
+      UserId: 1,
       link: req.body.link,
-      item_name: req.body.name,
+      item_name: req.body.item_name,
       price: req.body.price,
-      sport_name: req.body.sport,
-      professional: req.body.level,
+      sport_name: req.body.sport_name,
+      professional: req.body.professional,
       description: req.body.description
-    }).then((newItem)=> {
+    }).then(newItem => {
       console.log(newItem);
+      res.sendStatus(200);
     });
   });
 };

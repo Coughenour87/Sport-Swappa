@@ -3,12 +3,12 @@
         <label class="label">Choose Sport</label>
         <div class="control">
             <div class="select">
-                <select>
-                    <option>Football</option>
-                    <option>Basketball</option>
-                    <option>Baseball</option>
-                    <option>Soccer</option>
-                    <option>All Other Sports</option>
+                <select id="sport">
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="baseball">Baseball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="all">All Other Sports</option>
                 </select>
             </div>
         </div>
@@ -17,9 +17,9 @@
         <label class="label">Professional or Non-professional</label>
         <div class="control">
             <div class="select">
-                <select>
-                    <option>Professional Sports</option>
-                    <option>College and below</option>
+                <select id="level">
+                    <option value="professional">Professional Sports</option>
+                    <option value="amateur">College and below</option>
                 </select>
             </div>
         </div>
@@ -27,43 +27,44 @@
     <div class="field">
         <label class="label">Link to Picture of Item</label>
         <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input id="picture" class="input" type="text" placeholder="Text input">
         </div>
 
         <div class="field">
             <label class="label">Name of Item to Sell</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" id="title" type="text" placeholder="Text input">
             </div>
         </div>
-        </d<div class="field">
-        <label class="label">Price of Item</label>
-        <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+        <div class="field">
+            <label class="label">Price of Item</label>
+            <div class="control">
+                <input id="price" class="input" type="text" placeholder="Text input">
+            </div>
         </div>
-    </div>
-    <div class="field">
-        <label class="label">Brief Description of Item</label>
-        <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+        <div class="field">
+            <label class="label">Brief Description of Item</label>
+            <div class="control">
+                <textarea id="description" class="textarea" placeholder="Textarea"></textarea>
+            </div>
         </div>
-    </div>
 
-    <div class="field">
-        <div class="control">
-            <label class="checkbox">
-                <input type="checkbox">
-                I agree to the <a href="#">terms and conditions</a>
-            </label>
+        <div class="field">
+            <div class="control">
+                <label class="checkbox">
+                    <input id="checkbox" type="checkbox">
+                    I agree to the <a href="#">terms and conditions</a>
+                </label>
+            </div>
         </div>
+        <div class="field is-grouped">
+            <div class="control">
+                <button id="sub" class="button is-primary">Submit</button>
+            </div>
+            <div class="control">
+                <button class="button is-link is-light">Cancel</button>
+            </div>
+        </div>
+        <br></br>
     </div>
-    <div class="field is-grouped">
-        <div class="control">
-            <button class="button is-primary">Submit</button>
-        </div>
-        <div class="control">
-            <button class="button is-link is-light">Cancel</button>
-        </div>
-    </div>
-    <br></br>
-</div>
+    <script src="./js/sell.js"></script>
