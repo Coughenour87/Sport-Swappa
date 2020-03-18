@@ -51,7 +51,14 @@ module.exports = function(app) {
     }
   });
 
-  app.get("api/sellItems", (req, res) => {
-    db.Items.create({});
+  app.post("api/sellItems", (req, res) => {
+    db.Item.create({
+      link: req.body.link,
+      item_name: req.body.name,
+      price: req.body.price,
+      sport_name: req.body.sport,
+      professional: req.body.level,
+      description: req.body.description
+    });
   });
 };
