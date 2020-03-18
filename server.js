@@ -29,6 +29,15 @@ app.set("view engine", "handlebars");
 require("./controllers/api-routes.js")(app);
 require("./controllers/handlebar-routes")(app);
 
+//Routes
+app.get("/", function(req, res) {
+  res.render("index", data);
+});
+
+app.get("/items/", function(req, res) {
+  res.render("items");
+});
+
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
   app.listen(PORT, () => {
