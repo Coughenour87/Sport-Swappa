@@ -50,4 +50,8 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("api/sellItems", (req, res) => {
+    db.Items.create({});
+  });
 };
