@@ -7,14 +7,86 @@
     <title>SPORTSWAPPA</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-     <link rel="stylesheet" type="text/css" href="/stylesheets/sports.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/sports.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
 </head>
+<div class="wrapper">
+    <header>
+        <h1></h1>
+    </header>
 
-<body>
-    {{{ body }}}
-</body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    SPORTSWAPPA
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Choose a Sport
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Football
+                        </a>
+                        <a class="navbar-item">
+                            Basketball - Coming Soon
+                        </a>
+                        <a class="navbar-item">
+                            Baseball - Coming Soon
+                        </a>
+                        <a class="navbar-item">
+                            Soccer - Coming Soon
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            All other sports - Coming Soon
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/signup">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light" href="/login">
+                            Log in
+                        </a>
+                        <a class="button is-light" href="/sellItems">
+                            Sell Item
+                        </a>
+                        <a class="button is-light" href="/cart">
+                            Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <body>
+        {{{ body }}}
+    </body>
+
+    <footer>
+        <h4>Contact Us</h4>
+    </footer>
 
 </html>
 
