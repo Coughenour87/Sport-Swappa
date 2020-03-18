@@ -22,7 +22,7 @@ module.exports = function(app) {
 
   app.get("/login", function(req, res) {
     if (req.user) {
-      return res.redirect("/sportswappa");
+      return res.redirect("/");
     }
     res.render("login");
   });
