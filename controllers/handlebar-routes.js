@@ -41,4 +41,8 @@ module.exports = function(app) {
       res.render("login");
     }
   });
+
+  app.get("/items/", function(req, res) {
+    res.render("items");
+  });
 };
