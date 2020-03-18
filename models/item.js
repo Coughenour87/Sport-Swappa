@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
       item_name: DataTypes.STRING,
       price: DataTypes.DECIMAL(10, 2),
       sport_name: DataTypes.STRING,
-      professional: DataTypes.BOOLEAN
+      professional: DataTypes.BOOLEAN,
+      description: DataTypes.TEXT
     },
     {}
   );
