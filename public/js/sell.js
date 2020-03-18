@@ -18,7 +18,7 @@ $(document).ready(function() {
   //     priceInput.val("");
   //   });
   $("#sub").click(function() {
-    console.log('clicked')
+    console.log("clicked");
     const sport = $("#sport option:selected").text();
     const level = $("#level option:selected").text() === "Professional Sports";
     const picture = $("#picture").val();
@@ -34,7 +34,7 @@ $(document).ready(function() {
       description: description
     })
       .then(function() {
-        window.location.replace("/sell");
+        window.location.replace("/items");
       })
       .catch(sellUserErr);
   });

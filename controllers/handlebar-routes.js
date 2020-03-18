@@ -1,7 +1,7 @@
 //need to change html to handlebars.
 
 // Requiring path to so we can use relative routes to our HTML files
-// var db = require("../models");
+var db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -13,6 +13,12 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  app.get("/items", (req, res) => {
+    db.Item.findAll().then(items => {
+      console.log(items);
+      res.render("items", { Item: items });
+    });
+  });
   app.get("/signup", (req, res) => {
     if (req.user) {
       res.render("index");
