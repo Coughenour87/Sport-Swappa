@@ -2,6 +2,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
+const Handlebars = require("handlebars");
 var {
   allowInsecurePrototypeAccess
 } = require("@handlebars/allow-prototype-access");
