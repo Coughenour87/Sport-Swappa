@@ -59,6 +59,10 @@
                 </div>
             </div>
 
+            <div id ="time-block">
+                <p></p>
+            </div>
+
             <div class="navbar-end">
                 <div class="navbar-item" class="navbar-start">
                     <a class="navbar-item button is-primary " href="/signup">
@@ -84,6 +88,9 @@
     <footer>
         <h4>Contact Us</h4>
     </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+        $("#time-block").html(moment().format("dddd, MMM Do"));
+  </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 

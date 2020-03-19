@@ -52,7 +52,6 @@ module.exports = function(app) {
   });
 
   app.post("/api/sellItems", (req, res) => {
-    console.log("bingo");
     db.Item.create({
       UserId: 1,
       link: req.body.link,
