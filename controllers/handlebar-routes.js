@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   app.get("/items", (req, res) => {
     db.Item.findAll().then(items => {
-      console.log(items);
+      console.log("ITEMS:", items);
       res.render("items", { Item: items });
     });
   });
@@ -42,7 +42,11 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/items/", function(req, res) {
-    res.render("items");
+  app.get("/cart", (req, res) => {
+    res.render("cart");
   });
+
+  // app.get("/items/", function(req, res) {
+  //   res.render("items");
+  // });
 };

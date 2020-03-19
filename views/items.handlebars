@@ -1,12 +1,11 @@
 <div class="container">
     <div class="columns is-desktop">
         {{#each Item}}
-             <div class="column">
+        <div class="column">
             <div class="card">
                 <div class="card-image">
                     <figure class="image is-4by3">
-                        <img src={{link}}
-                            alt="Placeholder image">
+                        <img src={{link}} alt="Placeholder image">
                     </figure>
                 </div>
                 <div class="card-content">
@@ -20,7 +19,7 @@
 
                     <div class="content">
                         {{description}}
-                        <a href="/cart">Buy</a>
+                        <button class="buy" data-itemid="{{id}}">Buy</button>
                         <br>
 
                     </div>
@@ -31,108 +30,30 @@
     </div>
 </div>
 
-        {{!-- <div class="column">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://i.imgur.com/6Y3HiVM.jpg"
-                            alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
+ <script src="./js/items.js"></script>
 
-                        <div class="media-content">
-                            <p class="title is-4">Sam Mills Jersey</p>
-                            <p class="subtitle is-6">$75</p>
-                        </div>
-                    </div>
+{{!-- <div class="column">
+    <div class="card">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="https://i.imgur.com/dcswyeE.jpg" alt="Placeholder image">
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="media">
 
-                    <div class="content">
-                        Retired stitched Sam Mills Keep Pounding Jersey.
-                        <a href="#">Buy</a>
-                        <br>
-
-                    </div>
+                <div class="media-content">
+                    <p class="title is-4">Steve Smith Jersey</p>
+                    <p class="subtitle is-6">$40</p>
                 </div>
             </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://i.imgur.com/9pHh9K5.jpg"
-                            alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
 
-                        <div class="media-content">
-                            <p class="title is-4">Steve Davis Jersey</p>
-                            <p class="subtitle is-6">$60</p>
-                        </div>
-                    </div>
+            <div class="content">
+                Vintage Carolina Panthers Jersey.
+                <a href="#">Buy</a>
+                <br>
 
-                    <div class="content">
-                        2003 NFC Championship Jersey for the Carolina Panthers.
-                        <a href="#">Buy</a>
-                        <br>
-
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="column">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://i.imgur.com/vyIaxRM.jpg"
-                            alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-
-                        <div class="media-content">
-                            <p class="title is-4">Luke Kuechly Jersey</p>
-                            <p class="subtitle is-6">$60</p>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        Limited edition Salute to Service Jeresey for the Carolina Panthers.
-                        <a href="#">Buy</a>
-                        <br>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://i.imgur.com/dcswyeE.jpg"
-                            alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-
-                        <div class="media-content">
-                            <p class="title is-4">Steve Smith Jersey</p>
-                            <p class="subtitle is-6">$40</p>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        Vintage Carolina Panthers Jersey.
-                        <a href="#">Buy</a>
-                        <br>
-
-                    </div>
-                </div>
-            </div>
-        </div>
- --}}
+    </div>
+</div> --}}
