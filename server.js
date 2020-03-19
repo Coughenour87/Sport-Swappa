@@ -2,7 +2,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
-
+var {
+  allowInsecurePrototypeAccess
+} = require("@handlebars/allow-prototype-access");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
@@ -22,7 +24,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // express handlebars middleware
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
+  })
+);
 app.set("view engine", "handlebars");
 
 // Requiring our routes
