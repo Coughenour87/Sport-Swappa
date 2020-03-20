@@ -12,4 +12,4 @@ https://github.com/JustinMonty20/Sport-Swappa
 
 https://lit-tor-11160.herokuapp.com/
 
-![SportsSwappa Screenshot](/public/assets/images/sportsswappa.png)
+![SportsSwappa Screenshot](/public/assets/images/sportswappa.png)
