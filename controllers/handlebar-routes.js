@@ -42,7 +42,15 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/items/", function(req, res) {
-    res.render("items");
-  });
+  // app.get("/contact", function(req, res) {
+  //   res.render("contact");
+  // });
+
+  // app.get("/cart", (req, res) => {
+  //   res.render("cart");
+  // });
+
+  // app.get("/items/", function(req, res) {
+  //   res.render("items");
+  // });
 };
