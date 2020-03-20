@@ -13,12 +13,6 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/items", (req, res) => {
-    db.Item.findAll().then(items => {
-      console.log(items);
-      res.render("items", { Item: items });
-    });
-  });
   app.get("/signup", (req, res) => {
     if (req.user) {
       res.render("index");
@@ -41,7 +35,37 @@ module.exports = function(app) {
       res.render("login");
     }
   });
+  app.get("/items/football", (req, res) => {
+    db.Item.findAll({ where: { sport_name: "Football" } })
+      .then(footballItems => {
+        res.render("items", { Item: footballItems });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
 
+  app.get("/items/basketball", (req, res) => {
+    db.Item.findAll({ where: { sport_name: "Basketball" } })
+      .then(bballItems => {
+        res.render("items", { Item: bballItems });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+
+  app.get("/items/baseball", (req, res) => {
+    db.Item.findAll({ where: { sport_name: "Baseball" } })
+      .then(baseballItems => {
+        res.render("items", { Item: baseballItems });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+
+<<<<<<< HEAD
   // app.get("/contact", function(req, res) {
   //   res.render("contact");
   // });
@@ -53,4 +77,19 @@ module.exports = function(app) {
   // app.get("/items/", function(req, res) {
   //   res.render("items");
   // });
+=======
+  app.get("/items/soccer", (req, res) => {
+    db.Item.findAll({ where: { sport_name: "Soccer" } })
+      .then(items => {
+        console.log(items);
+        res.render("items", { Item: items });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+  // app.get("/contact", (req,res)=> {
+  //   res.render("contact")
+  // })
+>>>>>>> 6b65e6e338a76002881caf3c713ab08f808f4473
 };

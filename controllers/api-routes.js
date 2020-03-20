@@ -61,7 +61,7 @@ module.exports = function(app) {
       professional: req.body.professional,
       description: req.body.description
     }).then(newItem => {
-      console.log(newItem);
+      // console.log(newItem);
       res.sendStatus(200);
     });
   });
