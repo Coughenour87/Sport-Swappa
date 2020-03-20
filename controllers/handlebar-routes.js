@@ -75,7 +75,6 @@ module.exports = function(app) {
         console.log(err);
       });
   });
-
   app.get("/contact", (req, res) => {
     res.render("contact");
   });
