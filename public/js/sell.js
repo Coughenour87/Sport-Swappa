@@ -16,7 +16,7 @@ $(document).ready(function() {
       description: description
     })
       .then(function() {
-        window.location.replace("/items");
+        window.location.replace("/");
       })
       .catch(sellUserErr);
   });
